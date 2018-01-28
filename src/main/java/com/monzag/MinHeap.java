@@ -36,4 +36,8 @@ public class MinHeap {
         return getParentIndex(index) >= 0;
     }
 
+    public int leftChild(int index) {
+        return heap[getLeftChildIndex(index)];
+    }
+
 }
