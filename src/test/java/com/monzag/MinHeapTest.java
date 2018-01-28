@@ -19,6 +19,13 @@ class MinHeapTest {
         assertThrows(IllegalStateException.class, () -> heap.peek());
     }
 
+    @Test
+    void peekTest() {
+        addDataToHeap();
+        int expect = 0;
+        assertEquals(expect, heap.peek());
+    }
+
     private void addDataToHeap() {
         for (int i = 0; i <= 10; i++) {
             heap.add(i);
