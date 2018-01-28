@@ -54,4 +54,11 @@ public class MinHeap {
         heap[secondIndex] = temp;
     }
 
+    public int peek() {
+        if (size == 0) {
+            throw new IllegalStateException();
+        }
+        return heap[0];
+    }
+
 }
