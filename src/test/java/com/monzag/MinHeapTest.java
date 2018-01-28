@@ -11,7 +11,7 @@ class MinHeapTest {
 
     @BeforeEach
     public void createHeap() {
-        heap = new MinHeap(10);
+        this.heap = new MinHeap(10);
     }
 
     @Test
