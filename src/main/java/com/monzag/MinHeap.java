@@ -116,4 +116,12 @@ public class MinHeap {
         }
     }
 
+    @Override
+    public String toString() {
+        String result = "";
+        for (int index = TOP; index < size; index++){
+            result += heap[index] + " ";
+        }
+        return result.substring(TOP, result.length() - 1);
+    }
 }
