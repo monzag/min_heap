@@ -48,4 +48,10 @@ public class MinHeap {
         return heap[getParentIndex(index)];
     }
 
+    public void swap(int firstIndex, int secondIndex) {
+        int temp = heap[firstIndex];
+        heap[firstIndex] = heap[secondIndex];
+        heap[secondIndex] = temp;
+    }
+
 }
