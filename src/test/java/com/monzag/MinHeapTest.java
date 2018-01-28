@@ -33,7 +33,7 @@ class MinHeapTest {
         heap.add(1);
         heap.add(2);
         heap.add(4);
-        String expect = "1 2 3 5 4 0 0 0 0 0";
+        String expect = "1 2 3 5 4";
         assertEquals(expect, heap.toString());
     }
 
