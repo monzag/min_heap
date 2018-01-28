@@ -11,4 +11,16 @@ public class MinHeap {
         this.size = 0;
         this.heap = new int[this.maxSize];
     }
+
+    private int getLeftChildIndex(int parentIndex) {
+        return 2 * parentIndex + 1;
+    }
+
+    private int getRightChildIndex(int parentIndex) {
+        return 2 * parentIndex + 2;
+    }
+
+    private int getParentIndex(int childIndex) {
+        return (childIndex - 1)/2;
+    }
 }
