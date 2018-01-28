@@ -101,5 +101,11 @@ public class MinHeap {
         }
     }
 
+    public void add(int newItem) {
+        expandMaxSize();
+        heap[size] = newItem;
+        size++;
+        heapifyUp();
+    }
 
 }
