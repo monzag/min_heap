@@ -40,4 +40,8 @@ public class MinHeap {
         return heap[getLeftChildIndex(index)];
     }
 
+    public int rightChild(int index) {
+        return heap[getRightChildIndex(index)];
+    }
+
 }
