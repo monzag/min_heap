@@ -13,7 +13,12 @@ class MinHeapTest {
     public void createHeap() {
         heap = new MinHeap(10);
     }
-    
+
+    @Test
+    void peekForEmptyTest() {
+        assertThrows(IllegalStateException.class, () -> heap.peek());
+    }
+
     private void addDataToHeap() {
         for (int i = 0; i <= 10; i++) {
             heap.add(i);
