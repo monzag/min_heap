@@ -108,4 +108,12 @@ public class MinHeap {
         heapifyUp();
     }
 
+    public void heapifyUp() {
+        int index = size - 1;
+        while (hasParent(index) && parent(index) > heap[index]) {
+            swap(getParentIndex(index), index);
+            index = getParentIndex(index);
+        }
+    }
+
 }
