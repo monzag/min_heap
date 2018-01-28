@@ -2,6 +2,8 @@ package com.monzag;
 
 public class MinHeap {
 
+    private static final int TOP = 0;
+
     private int[] heap;
     private int maxSize;
     private int size;
@@ -58,7 +60,19 @@ public class MinHeap {
         if (size == 0) {
             throw new IllegalStateException();
         }
-        return heap[0];
+        return heap[TOP];
+    }
+
+    public int pool() {
+        if (size == 0) {
+            throw new IllegalStateException();
+        }
+
+        int root = heap[TOP];
+        heap[TOP] = heap[size-1];
+        size--;
+        heapifyDown();
+        return root;
     }
 
 }
