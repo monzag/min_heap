@@ -1,5 +1,7 @@
 package com.monzag;
 
+import java.util.Arrays;
+
 public class MinHeap {
 
     private static final int TOP = 0;
@@ -56,6 +58,13 @@ public class MinHeap {
         heap[secondIndex] = temp;
     }
 
+    public void expandMaxSize() {
+        if (size == maxSize) {
+            heap = Arrays.copyOf(heap, maxSize * 2);
+            maxSize *= 2;
+        }
+    }
+
     public int peek() {
         if (size == 0) {
             throw new IllegalStateException();
@@ -91,5 +100,6 @@ public class MinHeap {
             index = smallerChildIndex;
         }
     }
+
 
 }
