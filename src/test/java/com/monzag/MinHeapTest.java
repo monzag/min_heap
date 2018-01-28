@@ -26,6 +26,17 @@ class MinHeapTest {
         assertEquals(expect, heap.peek());
     }
 
+    @Test
+    void addTest() {
+        heap.add(3);
+        heap.add(5);
+        heap.add(1);
+        heap.add(2);
+        heap.add(4);
+        String expect = "1 2 3 5 4 0 0 0 0 0";
+        assertEquals(expect, heap.toString());
+    }
+
     private void addDataToHeap() {
         for (int i = 0; i <= 10; i++) {
             heap.add(i);
