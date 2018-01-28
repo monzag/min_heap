@@ -38,6 +38,11 @@ class MinHeapTest {
     }
 
     @Test
+    void poolForEmptyTest() {
+        assertThrows(IllegalStateException.class, () -> heap.pool());
+    }
+
+    @Test
     void poolTest() {
         addDataToHeap();
         heap.pool();
